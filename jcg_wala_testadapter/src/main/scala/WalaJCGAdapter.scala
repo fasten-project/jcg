@@ -22,6 +22,21 @@ import scala.collection.JavaConverters._
 import scala.collection.mutable
 
 object WalaJCGAdapter extends JCGTestAdapter {
+    def main(args: Array[String]): Unit = {
+        val jreDir = args(0)
+        val outputFile = args(1)
+
+        serializeCG(
+            "RTA",
+            s"$jreDir/rt.jar",
+            null,
+            Array.empty,
+            jreDir,
+            false,
+            outputFile
+        )
+    }
+
     override def serializeCG(
         algorithm:  String,
         target:     String,

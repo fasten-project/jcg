@@ -29,6 +29,6 @@ public class AllSubtypesOfApplicationEntrypoints extends HashSet<Entrypoint> {
     }
 
     private static boolean isApplicationClass(AnalysisScope scope, IClass klass) {
-        return scope.getApplicationLoader().equals(klass.getClassLoader().getReference());
+        return true;//scope.getApplicationLoader().equals(klass.getClassLoader().getReference());
     }
 }
