@@ -18,8 +18,12 @@ public class AllSubtypesOfApplicationEntrypoints extends HashSet<Entrypoint> {
             if (!klass.isInterface()) {
                 if (isApplicationClass(scope, klass)) {
                     for (IMethod method : klass.getDeclaredMethods()) {
-                        if (!method.isAbstract()) {
-                            add(new SubtypesEntrypoint(method, cha));
+                        if (!method.isAbstract() && !method.isPrivate()) {
+                            try {
+                                add(new SubtypesEntrypoint(method, cha));
+                            } catch (IllegalStateException e) {
+                                System.out.println(e);
+                            }
                         }
                     }
                 }
