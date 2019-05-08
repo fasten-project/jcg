@@ -32,7 +32,7 @@ object WalaJCGAdapter extends JCGTestAdapter {
             null,
             Array.empty,
             jreDir,
-            false,
+            true,
             outputFile
         )
     }
