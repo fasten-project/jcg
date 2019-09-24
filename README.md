@@ -172,16 +172,11 @@ The current OPAL adapter builds on an development build of OPAL, to set it up do
 
 First make sure to fulfill OPALs dependencies: (see [here](https://bitbucket.org/delors/opal/src/master/))
 
-Afterwards, clone the opal project, checkout the `feature/PointsTo` branch and publish the project to the local
+Afterwards, clone the opal project, checkout the `feature/PointsToAllocationSites` branch and publish the project to the local
 Ivy repository:
 ```
 $ git clone https://bitbucket.org/delors/opal.git
-$ git checkout feature/PointsTo
-$ sbt publishLocal
+$ git checkout feature/PointsToAllocationSites
+$ sbt clean update publishLocal
 ```
-
-``````
-
-## Usage-ready Docker Container
-
 
