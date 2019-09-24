@@ -53,6 +53,18 @@ And data classes for project specifications.
 
 - **jcg_evaluation** provides a several call-graph evaluation an understanding tools. The usage
 
+## Build instructions
+
+
+- **jcg_testcases** 
+Make sure to set `JAVA_HOME` to Java 8
+
+``` sh
+sbt clean
+sbt jcg_testcases/assembly
+java -jar jcg_testcases/scala-2.12/JCG\ Test\ Cases-assembly-1.0.jar --rsrcDir jcg_testcases/src/main/resources/ 
+```
+
 ## Annotating Test Expectations
 
 Within the core project, in `lib.annotations.callgraph`, are three different annotation classes that enable to specify expectations
