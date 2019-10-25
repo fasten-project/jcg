@@ -189,6 +189,6 @@ Ivy repository:
 ```
 $ git clone https://bitbucket.org/delors/opal.git
 $ git checkout feature/PointsToAllocationSites
-$ sbt clean update publishLocal
+$ sbt clean update publishM2
 ```
 
